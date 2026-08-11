@@ -1,16 +1,4 @@
 {
   "cleanUrls": true,
-  "trailingSlash": false,
-  "rewrites": [
-    {
-      "source": "/",
-      "has": [
-        {
-          "type": "host",
-          "value": "new-orleans-fencing-pros.vercel.app"
-        }
-      ],
-      "destination": "/new-orleans/index.html"
-    }
-  ]
+  "trailingSlash": false
 }

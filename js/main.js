@@ -16,20 +16,6 @@
 
   if (yearEl) yearEl.textContent = String(new Date().getFullYear());
 
-  /* Location links: local paths in dev, production domains live */
-  (function wireLocationLinks() {
-    var host = window.location.hostname;
-    var isLocal = host === "localhost" || host === "127.0.0.1";
-    var urls = {
-      st: isLocal ? "/" : "https://st-tammany-parish-fencing-pros.vercel.app/",
-      nola: isLocal ? "/new-orleans/" : "https://new-orleans-fencing-pros.vercel.app/",
-    };
-    document.querySelectorAll("[data-loc]").forEach(function (el) {
-      var key = el.getAttribute("data-loc");
-      if (urls[key]) el.setAttribute("href", urls[key]);
-    });
-  })();
-
   function updateHeader() {
     if (!header) return;
     header.classList.toggle("is-solid", window.scrollY > 24);
