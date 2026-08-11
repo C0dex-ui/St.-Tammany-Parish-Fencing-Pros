@@ -87,56 +87,54 @@ button { cursor: pointer; border: none; background: none; }
 .loc-bar-inner {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
   gap: 0.85rem;
   height: 100%;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   padding: 0;
 }
 
 .loc-bar-label {
-  color: rgba(255, 255, 255, 0.45);
+  color: rgba(255, 255, 255, 0.5);
   font-weight: 600;
   letter-spacing: 0.04em;
   text-transform: uppercase;
   font-size: 0.72rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .loc-switch {
   display: inline-flex;
   align-items: center;
-  gap: 0.2rem;
-  background: rgba(255, 255, 255, 0.08);
+  margin-left: auto;
   border: 0;
-  border-radius: 999px;
-  padding: 0.18rem;
   box-shadow: none;
   outline: none;
+  flex-shrink: 0;
 }
 
+/* Only the other company is shown as a switch control */
 .loc-link {
-  color: rgba(255, 255, 255, 0.72);
+  color: var(--white);
   font-weight: 600;
   font-size: 0.82rem;
-  padding: 0.35rem 0.85rem;
+  padding: 0.35rem 0.9rem;
   border: 0;
   border-radius: 999px;
+  background: var(--accent);
   box-shadow: none;
   outline: none;
   line-height: 1.2;
-  transition: background var(--t), color var(--t);
+  white-space: nowrap;
+  transition: background var(--t), color var(--t), opacity var(--t);
 }
 
 .loc-link:hover {
   color: var(--white);
-  background: rgba(255, 255, 255, 0.1);
-}
-
-.loc-link.is-active {
-  background: var(--accent);
-  color: var(--white);
-  border: 0;
-  box-shadow: none;
+  background: var(--accent-hover);
+  opacity: 0.95;
 }
 
 .nav-loc-m { display: none; }
@@ -1460,13 +1458,14 @@ h3 { font-size: 1.2rem; letter-spacing: -0.02em; }
 
   /* Location switcher — compact for phones */
   .loc-bar-label {
-    display: none;
+    font-size: 0.65rem;
+    max-width: 45%;
   }
 
   .loc-link {
-    font-size: 0.78rem;
-    padding: 0.4rem 0.75rem;
-    min-height: 36px;
+    font-size: 0.75rem;
+    padding: 0.35rem 0.7rem;
+    min-height: 34px;
     display: inline-flex;
     align-items: center;
   }
