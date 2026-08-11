@@ -17,8 +17,8 @@
   --ink: var(--primary-dark);
   --muted: var(--secondary-text);
   --wrap: 1200px;
-  --loc-bar-h: 0px;
-  --header-h: 80px;
+  --brand-bar-h: 38px;
+  --header-h: 72px;
   --r: 16px;
   --r-sm: 10px;
   --r-lg: 24px;
@@ -38,7 +38,7 @@
 
 html {
   scroll-behavior: smooth;
-  scroll-padding-top: calc(var(--header-h) + 16px);
+  scroll-padding-top: calc(var(--brand-bar-h) + var(--header-h) + 16px);
 }
 
 body {
@@ -74,59 +74,52 @@ button { cursor: pointer; border: none; background: none; }
 }
 .skip-link:focus { top: 1rem; }
 
-/* Brand switch sits above Get Free Estimate in header-right */
-.header-cta-stack {
-  display: none;
-  flex-direction: column;
-  align-items: stretch;
-  gap: 0.65rem;
-  /* Wide enough for "St. Tammany Parish" and "Get Free Estimate" */
-  min-width: 13.5rem;
+/* Slim utility brand bar ABOVE main header — other company only, never stacked on CTA */
+.brand-bar {
+  flex-shrink: 0;
+  height: var(--brand-bar-h);
+  display: flex;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.32);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
 }
 
-.loc-link,
-.header-brand-switch {
+.brand-bar-inner {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  width: min(100% - 2.5rem, var(--wrap));
+  margin-inline: auto;
+  height: 100%;
+  gap: 0.5rem;
+}
+
+.brand-switch {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 100%;
-  color: var(--white);
+  color: rgba(255, 255, 255, 0.9);
   font-family: var(--display);
   font-weight: 600;
-  font-size: 0.84rem;
-  padding: 0.55rem 1.15rem;
-  min-height: 2.5rem;
-  border: 0;
+  font-size: 0.78rem;
+  letter-spacing: 0.02em;
+  padding: 0.3rem 0.9rem;
+  min-height: 28px;
+  border: 1px solid rgba(255, 255, 255, 0.28);
   border-radius: 999px;
-  background: var(--accent);
-  box-shadow: none;
-  outline: none;
-  line-height: 1.2;
+  background: rgba(255, 255, 255, 0.08);
+  line-height: 1;
   white-space: nowrap;
-  text-align: center;
-  transition: background var(--t), color var(--t);
+  transition: background var(--t), border-color var(--t), color var(--t);
 }
 
-.loc-link:hover,
-.header-brand-switch:hover {
+.brand-switch:hover {
   color: var(--white);
-  background: var(--accent-hover);
-}
-
-.header-cta-stack .header-cta {
-  width: 100%;
-  justify-content: center;
-  min-height: 2.75rem;
-  padding-inline: 1.15rem;
+  background: var(--accent);
+  border-color: var(--accent);
 }
 
 .nav-loc-m { display: none; }
-
-@media (min-width: 769px) {
-  .header-cta-stack {
-    display: flex;
-  }
-}
 
 .footer-locations {
   display: grid;
@@ -309,7 +302,9 @@ h3 { font-size: 1.2rem; letter-spacing: -0.02em; }
   left: 0;
   right: 0;
   z-index: 1000;
-  height: var(--header-h);
+  display: flex;
+  flex-direction: column;
+  height: calc(var(--brand-bar-h) + var(--header-h));
   background: transparent;
   transition: background var(--t), box-shadow var(--t), backdrop-filter var(--t);
   border: 0;
@@ -324,8 +319,15 @@ h3 { font-size: 1.2rem; letter-spacing: -0.02em; }
   box-shadow: 0 10px 28px rgba(0, 0, 0, 0.25);
 }
 
+.site-header.is-solid .brand-bar {
+  background: rgba(0, 0, 0, 0.22);
+  border-bottom-color: rgba(255, 255, 255, 0.1);
+}
+
 .header-main {
+  flex: 1 1 auto;
   height: var(--header-h);
+  min-height: var(--header-h);
   border: 0;
   box-shadow: none;
 }
@@ -496,7 +498,7 @@ h3 { font-size: 1.2rem; letter-spacing: -0.02em; }
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  padding: calc(var(--header-h) + 1.5rem) 0 0;
+  padding: calc(var(--brand-bar-h) + var(--header-h) + 1.5rem) 0 0;
   color: var(--white);
   background: var(--primary-dark);
   overflow: hidden;
@@ -1428,11 +1430,21 @@ h3 { font-size: 1.2rem; letter-spacing: -0.02em; }
 @media (max-width: 768px) {
   :root {
     --header-h: 64px;
-    --loc-bar-h: 0px;
+    --brand-bar-h: 36px;
+  }
+
+  .brand-bar-inner {
+    width: min(100% - 1.5rem, var(--wrap));
+  }
+
+  .brand-switch {
+    font-size: 0.72rem;
+    padding: 0.28rem 0.75rem;
+    min-height: 26px;
   }
 
   html {
-    scroll-padding-top: calc(var(--header-h) + 12px);
+    scroll-padding-top: calc(var(--brand-bar-h) + var(--header-h) + 12px);
   }
 
   body {
@@ -1458,13 +1470,13 @@ h3 { font-size: 1.2rem; letter-spacing: -0.02em; }
 
   .brand-mark { width: 30px; height: 30px; font-size: 0.68rem; }
   .brand-name { font-size: 0.68rem; }
-  .header-cta-stack { display: none !important; }
+  .header-cta { display: none; }
 
   .nav-loc-m { display: list-item; }
 
   .nav {
     position: fixed;
-    inset: var(--header-h) 0 auto 0;
+    inset: calc(var(--brand-bar-h) + var(--header-h)) 0 auto 0;
     background: rgba(26, 26, 26, 0.98);
     border-bottom: 1px solid rgba(255, 255, 255, 0.08);
     padding: 0.5rem 1rem 1.25rem;
@@ -1473,7 +1485,7 @@ h3 { font-size: 1.2rem; letter-spacing: -0.02em; }
     visibility: hidden;
     transition: transform var(--t), opacity var(--t), visibility var(--t);
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.45);
-    max-height: min(70vh, calc(100dvh - var(--header-h)));
+    max-height: min(70vh, calc(100dvh - var(--brand-bar-h) - var(--header-h)));
     overflow-y: auto;
     -webkit-overflow-scrolling: touch;
   }
