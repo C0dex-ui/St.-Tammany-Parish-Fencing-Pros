@@ -17,7 +17,7 @@
   --ink: var(--primary-dark);
   --muted: var(--secondary-text);
   --wrap: 1200px;
-  --loc-bar-h: 36px;
+  --loc-bar-h: 0px;
   --header-h: 80px;
   --r: 16px;
   --r-sm: 10px;
@@ -38,7 +38,7 @@
 
 html {
   scroll-behavior: smooth;
-  scroll-padding-top: calc(var(--loc-bar-h) + var(--header-h) + 16px);
+  scroll-padding-top: calc(var(--header-h) + 16px);
 }
 
 body {
@@ -74,43 +74,24 @@ button { cursor: pointer; border: none; background: none; }
 }
 .skip-link:focus { top: 1rem; }
 
-/* Location switcher lives inside site-header */
-.loc-bar {
-  position: relative;
-  height: var(--loc-bar-h);
-  background: transparent;
-  border: 0;
-  box-shadow: none;
-  font-size: 0.82rem;
+/* Brand switch sits above Get Free Estimate in header-right */
+.header-cta-stack {
+  display: none;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 0.4rem;
+  min-width: 11.5rem;
 }
 
-.loc-bar-inner {
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
-  gap: 0.85rem;
-  height: 100%;
-  flex-wrap: nowrap;
-  padding: 0;
-  width: 100%;
-}
-
-.loc-switch {
+.loc-link,
+.header-brand-switch {
   display: inline-flex;
   align-items: center;
-  margin-left: auto;
-  border: 0;
-  box-shadow: none;
-  outline: none;
-  flex-shrink: 0;
-}
-
-/* Only the other brand — single switch control, right-aligned */
-.loc-link {
+  justify-content: center;
   color: var(--white);
   font-weight: 600;
-  font-size: 0.82rem;
-  padding: 0.35rem 0.95rem;
+  font-size: 0.78rem;
+  padding: 0.4rem 0.85rem;
   border: 0;
   border-radius: 999px;
   background: var(--accent);
@@ -118,15 +99,23 @@ button { cursor: pointer; border: none; background: none; }
   outline: none;
   line-height: 1.2;
   white-space: nowrap;
+  text-align: center;
   transition: background var(--t), color var(--t);
 }
 
-.loc-link:hover {
+.loc-link:hover,
+.header-brand-switch:hover {
   color: var(--white);
   background: var(--accent-hover);
 }
 
 .nav-loc-m { display: none; }
+
+@media (min-width: 769px) {
+  .header-cta-stack {
+    display: flex;
+  }
+}
 
 .footer-locations {
   display: grid;
@@ -309,7 +298,7 @@ h3 { font-size: 1.2rem; letter-spacing: -0.02em; }
   left: 0;
   right: 0;
   z-index: 1000;
-  height: calc(var(--loc-bar-h) + var(--header-h));
+  height: var(--header-h);
   background: transparent;
   transition: background var(--t), box-shadow var(--t), backdrop-filter var(--t);
   border: 0;
@@ -496,7 +485,7 @@ h3 { font-size: 1.2rem; letter-spacing: -0.02em; }
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  padding: calc(var(--loc-bar-h) + var(--header-h) + 1.5rem) 0 0;
+  padding: calc(var(--header-h) + 1.5rem) 0 0;
   color: var(--white);
   background: var(--primary-dark);
   overflow: hidden;
@@ -1428,11 +1417,11 @@ h3 { font-size: 1.2rem; letter-spacing: -0.02em; }
 @media (max-width: 768px) {
   :root {
     --header-h: 64px;
-    --loc-bar-h: 40px;
+    --loc-bar-h: 0px;
   }
 
   html {
-    scroll-padding-top: calc(var(--loc-bar-h) + var(--header-h) + 12px);
+    scroll-padding-top: calc(var(--header-h) + 12px);
   }
 
   body {
@@ -1445,16 +1434,7 @@ h3 { font-size: 1.2rem; letter-spacing: -0.02em; }
     width: min(100% - 1.5rem, var(--wrap));
   }
 
-  /* Location switcher — compact for phones */
-  .loc-link {
-    font-size: 0.75rem;
-    padding: 0.35rem 0.75rem;
-    min-height: 34px;
-    display: inline-flex;
-    align-items: center;
-  }
-
-  .brand {
+    .brand {
     max-width: min(200px, 58vw);
     padding: 0.25rem 0.4rem;
   }
@@ -1467,13 +1447,13 @@ h3 { font-size: 1.2rem; letter-spacing: -0.02em; }
 
   .brand-mark { width: 30px; height: 30px; font-size: 0.68rem; }
   .brand-name { font-size: 0.68rem; }
-  .header-cta { display: none; }
+  .header-cta-stack { display: none !important; }
 
   .nav-loc-m { display: list-item; }
 
   .nav {
     position: fixed;
-    inset: calc(var(--loc-bar-h) + var(--header-h)) 0 auto 0;
+    inset: var(--header-h) 0 auto 0;
     background: rgba(26, 26, 26, 0.98);
     border-bottom: 1px solid rgba(255, 255, 255, 0.08);
     padding: 0.5rem 1rem 1.25rem;
@@ -1482,7 +1462,7 @@ h3 { font-size: 1.2rem; letter-spacing: -0.02em; }
     visibility: hidden;
     transition: transform var(--t), opacity var(--t), visibility var(--t);
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.45);
-    max-height: min(70vh, calc(100dvh - var(--loc-bar-h) - var(--header-h)));
+    max-height: min(70vh, calc(100dvh - var(--header-h)));
     overflow-y: auto;
     -webkit-overflow-scrolling: touch;
   }
