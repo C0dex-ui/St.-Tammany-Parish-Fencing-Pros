@@ -161,3 +161,13 @@
   border: 0;
   box-shadow: 0 10px 28px rgba(0, 0, 0, 0.25);
 }
+
+@media (max-width: 768px) {
+  .mobile-cta-bar {
+    background: rgba(20, 20, 20, 0.96);
+  }
+
+  .mobile-cta-bar .btn-primary {
+    background: var(--accent);
+  }
+}

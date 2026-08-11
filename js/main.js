@@ -27,6 +27,7 @@
     navToggle.setAttribute("aria-expanded", "false");
     navToggle.setAttribute("aria-label", "Open menu");
     document.body.style.overflow = "";
+    if (header && window.scrollY <= 24) header.classList.remove("is-solid");
   }
 
   function openNav() {
@@ -35,6 +36,7 @@
     navToggle.setAttribute("aria-expanded", "true");
     navToggle.setAttribute("aria-label", "Close menu");
     document.body.style.overflow = "hidden";
+    if (header) header.classList.add("is-solid");
   }
 
   if (navToggle && nav) {
