@@ -150,13 +150,14 @@
   background: #0f0f0f;
 }
 
-.site-header,
-.site-header.is-solid {
-  background: var(--primary-dark);
+.site-header {
+  background: transparent;
   border: 0;
   box-shadow: none;
 }
 
 .site-header.is-solid {
-  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.22);
+  background: rgba(20, 20, 20, 0.96);
+  border: 0;
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.25);
 }
