@@ -1,16 +1,30 @@
 {
   "cleanUrls": true,
   "trailingSlash": false,
-  "rewrites": [
+  "buildCommand": "node scripts/select-home.js",
+  "outputDirectory": "public",
+  "redirects": [
     {
-      "source": "/",
+      "source": "/new-orleans",
       "has": [
         {
           "type": "host",
-          "value": "new-orleans-fencing-pros.vercel.app"
+          "value": "st-tammany-parish-fencing-pros.vercel.app"
         }
       ],
-      "destination": "/new-orleans/index.html"
+      "destination": "https://new-orleans-fencing-pros.vercel.app/",
+      "permanent": false
+    },
+    {
+      "source": "/new-orleans/(.*)",
+      "has": [
+        {
+          "type": "host",
+          "value": "st-tammany-parish-fencing-pros.vercel.app"
+        }
+      ],
+      "destination": "https://new-orleans-fencing-pros.vercel.app/",
+      "permanent": false
     }
   ]
 }
