@@ -3,7 +3,13 @@
   "trailingSlash": false,
   "rewrites": [
     {
-      "source": "/new-orleans",
+      "source": "/",
+      "has": [
+        {
+          "type": "host",
+          "value": "new-orleans-fencing-pros.vercel.app"
+        }
+      ],
       "destination": "/new-orleans/index.html"
     }
   ]
