@@ -87,22 +87,12 @@ button { cursor: pointer; border: none; background: none; }
 .loc-bar-inner {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: flex-end;
   gap: 0.85rem;
   height: 100%;
   flex-wrap: nowrap;
   padding: 0;
-}
-
-.loc-bar-label {
-  color: rgba(255, 255, 255, 0.5);
-  font-weight: 600;
-  letter-spacing: 0.04em;
-  text-transform: uppercase;
-  font-size: 0.72rem;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
+  width: 100%;
 }
 
 .loc-switch {
@@ -115,12 +105,12 @@ button { cursor: pointer; border: none; background: none; }
   flex-shrink: 0;
 }
 
-/* Only the other company is shown as a switch control */
+/* Only the other brand — single switch control, right-aligned */
 .loc-link {
   color: var(--white);
   font-weight: 600;
   font-size: 0.82rem;
-  padding: 0.35rem 0.9rem;
+  padding: 0.35rem 0.95rem;
   border: 0;
   border-radius: 999px;
   background: var(--accent);
@@ -128,13 +118,12 @@ button { cursor: pointer; border: none; background: none; }
   outline: none;
   line-height: 1.2;
   white-space: nowrap;
-  transition: background var(--t), color var(--t), opacity var(--t);
+  transition: background var(--t), color var(--t);
 }
 
 .loc-link:hover {
   color: var(--white);
   background: var(--accent-hover);
-  opacity: 0.95;
 }
 
 .nav-loc-m { display: none; }
@@ -1457,14 +1446,9 @@ h3 { font-size: 1.2rem; letter-spacing: -0.02em; }
   }
 
   /* Location switcher — compact for phones */
-  .loc-bar-label {
-    font-size: 0.65rem;
-    max-width: 45%;
-  }
-
   .loc-link {
     font-size: 0.75rem;
-    padding: 0.35rem 0.7rem;
+    padding: 0.35rem 0.75rem;
     min-height: 34px;
     display: inline-flex;
     align-items: center;
