@@ -1,0 +1,118 @@
+HOMEPAGE PROMPT – ST. TAMMANY PARISH FENCING PROS
+=================================================
+
+GOAL
+Create a professional, high-converting homepage for a local fencing company called **St. Tammany Parish Fencing Pros**.  
+The design and structure should be clean, modern, and easily reusable for other fencing companies (including New Orleans Fencing Pros).
+
+Design Style: Industrial Material Design 3 with controlled 3D scroll effects  
+(subtle hero parallax, light card lift/tilt on scroll, and soft depth on process steps).
+
+COLOR PALETTE (exact – do not change)
+- Primary Dark: #1A1A1A (Deep Charcoal)
+- Accent: #2E7D32 (Forest Green)
+- Background Light: #F8F7F4 (Warm Off-White)
+- Background Soft: #E8EDE8 (Soft Sage Gray)
+- Secondary Text: #5C5A55 (Warm Medium Gray)
+- White: #FFFFFF
+- Border / Divider: #D6D3CD
+
+INSPIRATION SITES
+- https://texasfencebuilders.net/
+- https://houstonfence.com/
+- https://carolinafencecompany.com/
+
+Also take visual and layout inspiration from: Dribbble, Mobbin, Behance, Awwwards, Godly, Collect UI, Refero, Land-book, Lapa Ninja, SiteInspire, Page Flows, One Page Love, Screenlane, and Muzli.
+
+COMPANY
+Name: St. Tammany Parish Fencing Pros  
+Location: St. Tammany Parish, Louisiana (Northshore – Covington, Mandeville, islidell, and surrounding areas)  
+Tone: Professional, reliable, local, and high-quality
+
+HOMEPAGE STRUCTURE
+
+1. Sticky Header
+- Dark background (#1A1A1A)
+- Company logo + name
+- Navigation: Services, Projects, Areas, About, Contact
+- Phone number
+- “Get Free Estimate” button in Forest Green (#2E7D32)
+
+2. Hero Section
+- Strong full-width image of a finished, high-quality fence
+- Headline: “Quality Fencing Built for Louisiana Homes”
+- Subheadline: “Wood, Vinyl, Iron & Privacy Fences Installed Across St. Tammany Parish”
+- Two buttons: “Get Free Estimate” and “Call Now”
+- Trust line under buttons: Locally Owned • Licensed & Insured • Free On-Site Estimates
+
+3. Trust Bar
+Display key trust points in a clean horizontal strip:
+- Licensed & Insured
+- 15+ Years Experience
+- 1,000+ Fences Installed
+- Workmanship Warranty
+- Free Estimates
+
+4. Services Section
+Heading: Fencing Services We Offer
+
+Show as clean cards with subtle scroll depth:
+- Wood Fencing
+- Vinyl Fencing
+- Ornamental Iron & Aluminum
+- Privacy Fencing
+- Commercial Fencing
+- Custom Gates
+- Fence Repair
+- Fence Replacement
+
+Add a “View All Services” button at the bottom.
+
+5. Process Section
+Heading: How We Work
+Show a clear 4-step process:
+1. Free On-Site Estimate
+2. Material Selection & Design
+3. Professional Installation
+4. Final Walkthrough & Cleanup
+
+6. Projects Section
+Heading: Recent Fence Projects  
+Clean photo grid (3 or 4 columns).  
+Button: “View Full Gallery”
+
+7. Service Areas
+Heading: Areas We Serve  
+Text: Serving St. Tammany Parish and nearby communities including Covington, Mandeville, Slidell, Madisonville, Abita Springs, Lacombe, and Pearl River.  
+Include a simple map.  
+Button: “See All Areas”
+
+8. Free Estimate Form (Important)
+Heading: Request Your Free Fence Estimate  
+Intro text: “Fill out the form below and we’ll get back to you with pricing.”
+
+Form fields:
+- Full Name
+- Phone Number
+- Email
+- Property Address
+- Fence Material (Wood, Vinyl, Iron, Aluminum, Privacy, Other)
+- Approximate Linear Feet
+- Fence Height (4ft, 5ft, 6ft, 8ft, Custom)
+- Project Type (New Fence, Replacement, Repair, Gate)
+- Additional Details
+- Submit button: “Get My Free Estimate” (Forest Green #2E7D32)
+
+Place the phone number prominently next to the form.
+
+9. Footer
+Simple and clean with company name, phone, and basic links.
+
+ADDITIONAL INSTRUCTIONS
+- Keep the content professional and natural for a fencing company.
+- Make the Free Estimate form the main conversion focus.
+- Use subtle 3D scroll effects only.
+- Mobile-first and high contrast.
+- Design should feel trustworthy and local.
+
+Build a clean, modern homepage that helps visitors quickly understand the services and easily request a free fencing estimate.
