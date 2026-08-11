@@ -14,43 +14,44 @@
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
 
-  <div class="loc-bar" aria-label="Service locations">
-    <div class="wrap loc-bar-inner">
-      <span class="loc-bar-label">Our locations</span>
-      <nav class="loc-switch" aria-label="Choose location">
-        <a href="./" class="loc-link is-active" aria-current="page">St. Tammany Parish</a>
-        <a href="new-orleans/" class="loc-link">New Orleans</a>
-      </nav>
-    </div>
-  </div>
-
   <header class="site-header" id="header">
-    <div class="wrap header-wrap">
-      <a href="./" class="brand" aria-label="St. Tammany Parish Fencing Pros home">
-        <img src="resources/logo/st. tammany-fencing-logo.png" alt="St. Tammany Parish Fencing Pros" width="210" height="52">
-      </a>
-
-      <nav class="nav" id="nav" aria-label="Primary">
-        <ul class="nav-links">
-          <li><a href="#services">Services</a></li>
-          <li><a href="#projects">Projects</a></li>
-          <li><a href="#areas">Areas</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#estimate">Contact</a></li>
-          <li class="nav-loc-m"><a href="new-orleans/">New Orleans</a></li>
-        </ul>
-        <a href="#estimate" class="btn btn-primary nav-cta-m">Get Free Estimate</a>
-      </nav>
-
-      <div class="header-right">
-        <a href="tel:+19855550199" class="header-phone">
-          <small>Talk to us</small>
-          <strong>(985) 555-0199</strong>
+    <div class="loc-bar" aria-label="Service locations">
+      <div class="wrap loc-bar-inner">
+        <span class="loc-bar-label">Our locations</span>
+        <nav class="loc-switch" aria-label="Choose location">
+          <a href="./" class="loc-link is-active" aria-current="page">St. Tammany Parish</a>
+          <a href="new-orleans/" class="loc-link">New Orleans</a>
+        </nav>
+      </div>
+    </div>
+    <div class="header-main">
+      <div class="wrap header-wrap">
+        <a href="./" class="brand" aria-label="St. Tammany Parish Fencing Pros home">
+          <img src="resources/logo/st. tammany-fencing-logo.png" alt="St. Tammany Parish Fencing Pros" width="210" height="52">
         </a>
-        <a href="#estimate" class="btn btn-primary header-cta">Get Free Estimate</a>
-        <button class="burger" id="navToggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="nav">
-          <span></span><span></span><span></span>
-        </button>
+
+        <nav class="nav" id="nav" aria-label="Primary">
+          <ul class="nav-links">
+            <li><a href="#services">Services</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#areas">Areas</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#estimate">Contact</a></li>
+            <li class="nav-loc-m"><a href="new-orleans/">New Orleans</a></li>
+          </ul>
+          <a href="#estimate" class="btn btn-primary nav-cta-m">Get Free Estimate</a>
+        </nav>
+
+        <div class="header-right">
+          <a href="tel:+19855550199" class="header-phone">
+            <small>Talk to us</small>
+            <strong>(985) 555-0199</strong>
+          </a>
+          <a href="#estimate" class="btn btn-primary header-cta">Get Free Estimate</a>
+          <button class="burger" id="navToggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="nav">
+            <span></span><span></span><span></span>
+          </button>
+        </div>
       </div>
     </div>
   </header>
@@ -58,8 +59,18 @@
   <main id="main">
     <!-- HERO -->
     <section class="hero" id="top">
-      <div class="hero-media" data-parallax>
-        <img src="images/hero.jpg" alt="Wood privacy fence installed for a home in St. Tammany Parish" width="2000" height="1125" fetchpriority="high">
+      <div class="hero-media">
+        <video
+          class="hero-video"
+          autoplay
+          muted
+          loop
+          playsinline
+          preload="metadata"
+          aria-hidden="true"
+        >
+          <source src="resources/video/fencing-hero.mp4" type="video/mp4">
+        </video>
         <div class="hero-shade"></div>
       </div>
 

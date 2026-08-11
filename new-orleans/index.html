@@ -5,52 +5,54 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Local fence company in New Orleans. Wood, vinyl, iron & privacy fences installed in Metairie, Kenner, Gretna, the West Bank & Greater New Orleans. Free on-site estimates. Call (504) 555-0199.">
   <title>New Orleans Fencing Pros | Local Fence Company · Greater New Orleans</title>
-  <link rel="icon" type="image/jpeg" href="../resources/logo/st. tammany-fencing-favicon.jpg">
+  <link rel="icon" type="image/jpeg" href="../resources/logo/new-orleans-fencing-favicon.jpg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&family=Source+Sans+3:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../css/styles.css">
+  <link rel="stylesheet" href="../css/new-orleans-theme.css">
 </head>
-<body>
+<body class="theme-nola">
   <a class="skip-link" href="#main">Skip to content</a>
 
-  <div class="loc-bar" aria-label="Service locations">
-    <div class="wrap loc-bar-inner">
-      <span class="loc-bar-label">Our locations</span>
-      <nav class="loc-switch" aria-label="Choose location">
-        <a href="../" class="loc-link">St. Tammany Parish</a>
-        <a href="./" class="loc-link is-active" aria-current="page">New Orleans</a>
-      </nav>
-    </div>
-  </div>
-
   <header class="site-header" id="header">
-    <div class="wrap header-wrap">
-      <a href="./" class="brand" aria-label="New Orleans Fencing Pros home">
-        <img src="../resources/logo/new-orleans-fencing-logo.png" alt="New Orleans Fencing Pros" width="210" height="52">
-      </a>
-
-      <nav class="nav" id="nav" aria-label="Primary">
-        <ul class="nav-links">
-          <li><a href="#services">Services</a></li>
-          <li><a href="#projects">Projects</a></li>
-          <li><a href="#areas">Areas</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#estimate">Contact</a></li>
-          <li class="nav-loc-m"><a href="../">St. Tammany Parish</a></li>
-        </ul>
-        <a href="#estimate" class="btn btn-primary nav-cta-m">Get Free Estimate</a>
-      </nav>
-
-      <div class="header-right">
-        <a href="tel:+15045550199" class="header-phone">
-          <small>Talk to us</small>
-          <strong>(504) 555-0199</strong>
+    <div class="loc-bar" aria-label="Service locations">
+      <div class="wrap loc-bar-inner">
+        <span class="loc-bar-label">Our locations</span>
+        <nav class="loc-switch" aria-label="Choose location">
+          <a href="../" class="loc-link">St. Tammany Parish</a>
+          <a href="./" class="loc-link is-active" aria-current="page">New Orleans</a>
+        </nav>
+      </div>
+    </div>
+    <div class="header-main">
+      <div class="wrap header-wrap">
+        <a href="./" class="brand" aria-label="New Orleans Fencing Pros home">
+          <img src="../resources/logo/new-orleans-fencing-logo.png" alt="New Orleans Fencing Pros" width="210" height="52">
         </a>
-        <a href="#estimate" class="btn btn-primary header-cta">Get Free Estimate</a>
-        <button class="burger" id="navToggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="nav">
-          <span></span><span></span><span></span>
-        </button>
+
+        <nav class="nav" id="nav" aria-label="Primary">
+          <ul class="nav-links">
+            <li><a href="#services">Services</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#areas">Areas</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#estimate">Contact</a></li>
+            <li class="nav-loc-m"><a href="../">St. Tammany Parish</a></li>
+          </ul>
+          <a href="#estimate" class="btn btn-primary nav-cta-m">Get Free Estimate</a>
+        </nav>
+
+        <div class="header-right">
+          <a href="tel:+15045550199" class="header-phone">
+            <small>Talk to us</small>
+            <strong>(504) 555-0199</strong>
+          </a>
+          <a href="#estimate" class="btn btn-primary header-cta">Get Free Estimate</a>
+          <button class="burger" id="navToggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="nav">
+            <span></span><span></span><span></span>
+          </button>
+        </div>
       </div>
     </div>
   </header>
@@ -58,8 +60,18 @@
   <main id="main">
     <!-- HERO -->
     <section class="hero" id="top">
-      <div class="hero-media" data-parallax>
-        <img src="../images/hero.jpg" alt="Wood privacy fence installed for a home in Greater New Orleans" width="2000" height="1125" fetchpriority="high">
+      <div class="hero-media">
+        <video
+          class="hero-video"
+          autoplay
+          muted
+          loop
+          playsinline
+          preload="metadata"
+          aria-hidden="true"
+        >
+          <source src="../resources/video/fencing-hero.mp4" type="video/mp4">
+        </video>
         <div class="hero-shade"></div>
       </div>
 

@@ -1,0 +1,162 @@
+/* ==========================================================================
+   New Orleans Fencing Pros — location theme only
+   Does not affect St. Tammany Parish styles (loaded only on /new-orleans/)
+   ========================================================================== */
+
+:root {
+  --primary-dark: #141414;
+  --accent: #1B3A4B;
+  --accent-hover: #152f3d;
+  --accent-soft: rgba(27, 58, 75, 0.12);
+  --accent-secondary: #C2733A;
+  --accent-secondary-hover: #A85F2F;
+  --bg-light: #F9F7F4;
+  --bg-soft: #EDE9E3;
+  --secondary-text: #5A5650;
+  --white: #FFFFFF;
+  --border: #D6D1C9;
+
+  --ink: var(--primary-dark);
+  --muted: var(--secondary-text);
+
+  /* Soft light navy for text on dark sections */
+  --on-dark-accent: #B8C9D4;
+
+  --shadow-green: 0 4px 14px rgba(27, 58, 75, 0.28);
+  --shadow-sm: 0 1px 3px rgba(20, 20, 20, 0.06);
+  --shadow-md: 0 8px 24px rgba(20, 20, 20, 0.08);
+  --shadow-lg: 0 16px 40px rgba(20, 20, 20, 0.12);
+}
+
+/* ---- Hardcoded green → navy/copper overrides ---- */
+
+.loc-link.is-active {
+  background: var(--accent);
+}
+
+.footer-locations a:hover,
+.footer-locations a.is-active {
+  color: var(--on-dark-accent);
+}
+
+.footer-loc-phone:hover {
+  color: var(--accent-secondary) !important;
+}
+
+.eyebrow-on-dark {
+  color: var(--on-dark-accent);
+}
+
+.header-phone:hover strong {
+  color: var(--on-dark-accent);
+}
+
+.btn-primary {
+  background: var(--accent);
+  box-shadow: var(--shadow-green);
+}
+
+.btn-primary:hover {
+  background: var(--accent-hover);
+  box-shadow: 0 6px 18px rgba(27, 58, 75, 0.35);
+}
+
+/* Copper as optional hover lift on primary CTAs */
+.btn-primary:active {
+  background: var(--accent-secondary-hover);
+}
+
+.svc-photo:hover {
+  border-color: transparent;
+}
+
+.svc-card:hover {
+  border-color: rgba(27, 58, 75, 0.35);
+}
+
+.svc-photo-body .text-link {
+  color: var(--on-dark-accent);
+}
+
+.phone-card:hover {
+  border-color: rgba(194, 115, 58, 0.55);
+}
+
+.form-ok {
+  background: var(--accent-soft);
+  border-color: rgba(27, 58, 75, 0.3);
+  color: var(--accent-hover);
+}
+
+.field input:focus,
+.field select:focus,
+.field textarea:focus {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px var(--accent-soft);
+}
+
+.perk-list li::before {
+  background-color: var(--accent);
+}
+
+.quote-form {
+  border-top-color: var(--accent);
+}
+
+.footer-grid ul a:hover {
+  color: var(--on-dark-accent);
+}
+
+.footer-phone:hover {
+  color: var(--accent-secondary);
+}
+
+/* Copper accents for tags / secondary highlights */
+.gal-tag {
+  background: var(--accent);
+}
+
+.svc-kicker {
+  background: var(--accent);
+}
+
+.metric strong {
+  color: var(--accent);
+}
+
+.step-num {
+  color: var(--accent);
+}
+
+.city-pin {
+  color: var(--accent);
+}
+
+.trust-ico {
+  background: var(--accent-soft);
+  color: var(--accent);
+}
+
+.brand-mark {
+  background: var(--accent);
+}
+
+/* Mid CTA / estimate dark sections */
+.mid-cta {
+  background: var(--primary-dark);
+}
+
+.site-footer {
+  background: #0f0f0f;
+}
+
+.site-header,
+.site-header.is-solid {
+  background: var(--primary-dark);
+  border: 0;
+  box-shadow: none;
+}
+
+.site-header.is-solid {
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.22);
+}

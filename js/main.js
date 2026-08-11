@@ -11,8 +11,8 @@
   const yearEl = document.getElementById("year");
   const form = document.getElementById("estimateForm");
   const formSuccess = document.getElementById("formSuccess");
-  const parallaxRoot = document.querySelector("[data-parallax]");
   const prefersReduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  const heroVideo = document.querySelector(".hero-video");
 
   if (yearEl) yearEl.textContent = String(new Date().getFullYear());
 
@@ -53,14 +53,23 @@
     });
   }
 
-  function updateParallax() {
-    if (!parallaxRoot || prefersReduced) return;
-    const img = parallaxRoot.querySelector("img");
-    if (!img) return;
-    const rect = parallaxRoot.getBoundingClientRect();
-    if (rect.bottom < 0 || rect.top > window.innerHeight) return;
-    const progress = Math.min(1, Math.max(0, -rect.top / Math.max(rect.height, 1)));
-    img.style.transform = "translate3d(0, " + (progress * 60).toFixed(1) + "px, 0)";
+  /* Pause hero video when off-screen / reduced motion */
+  function updateHeroVideo() {
+    if (!heroVideo) return;
+    if (prefersReduced) {
+      heroVideo.pause();
+      return;
+    }
+    const rect = heroVideo.getBoundingClientRect();
+    const visible = rect.bottom > 0 && rect.top < window.innerHeight;
+    if (visible) {
+      const playPromise = heroVideo.play();
+      if (playPromise && typeof playPromise.catch === "function") {
+        playPromise.catch(function () {});
+      }
+    } else {
+      heroVideo.pause();
+    }
   }
 
   function initReveal() {
@@ -167,14 +176,14 @@
     ticking = true;
     requestAnimationFrame(function () {
       updateHeader();
-      updateParallax();
+      updateHeroVideo();
       ticking = false;
     });
   }
 
   window.addEventListener("scroll", onScroll, { passive: true });
   updateHeader();
-  updateParallax();
+  updateHeroVideo();
   initReveal();
   initTilt();
 })();
